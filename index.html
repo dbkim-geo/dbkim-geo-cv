@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="개인 포트폴리오 — 학력, 경력, 논문, 프로젝트, 기술">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     NAV
+══════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html" id="nav-logo">Portfolio</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">홈</a></li>
+      <li><a href="#background">학력 / 경력</a></li>
+      <li><a href="#publications">실적</a></li>
+      <li><a href="#projects">프로젝트</a></li>
+      <li><a href="#skills">기술</a></li>
+      <li><a href="#contact">연락처</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Researcher · 연구원
+      </div>
+      <h1 class="hero-name" id="hero-name">이름</h1>
+      <div class="hero-title" id="hero-title">소속 · 부서</div>
+      <p class="hero-bio" id="hero-bio">자기소개</p>
+      <div class="hero-tags" id="hero-tags"></div>
+      <div class="hero-actions">
+        <a href="#publications" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          연구 실적 보기
+        </a>
+        <a href="#contact" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          연락하기
+        </a>
+      </div>
+      <div class="hero-social" id="hero-social"></div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <div class="hero-photo" id="hero-photo">
+          <div class="hero-photo-placeholder">👤</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+    scroll
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STATS
+══════════════════════════════════════════ -->
+<section id="stats">
+  <div class="container">
+    <div class="stats-grid" id="stats-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     학력 / 경력
+══════════════════════════════════════════ -->
+<section id="background">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Background</div>
+      <h2 class="section-title">학력 & 경력</h2>
+      <p class="section-sub">학문적 배경과 연구 경험을 소개합니다.</p>
+    </div>
+    <div class="bg-columns">
+      <div>
+        <div class="bg-col-title">
+          <span>🎓</span> 학력
+        </div>
+        <div class="timeline" id="education-timeline"></div>
+      </div>
+      <div>
+        <div class="bg-col-title">
+          <span>💼</span> 경력
+        </div>
+        <div class="timeline" id="career-timeline"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     실적 (Publications & Patents)
+══════════════════════════════════════════ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Publications & Patents</div>
+      <h2 class="section-title">연구 실적</h2>
+      <p class="section-sub">논문, 학술대회 발표, 특허 및 소프트웨어 실적입니다.</p>
+    </div>
+    <div class="pub-tabs" id="pub-tabs"></div>
+    <div id="pub-lists"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     프로젝트
+══════════════════════════════════════════ -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Research Projects</div>
+      <h2 class="section-title">참여 프로젝트</h2>
+      <p class="section-sub">정부 과제, 산학협력 등 다양한 연구 프로젝트에 참여했습니다.</p>
+    </div>
+    <div class="projects-grid" id="projects-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     기술
+══════════════════════════════════════════ -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="section-label">Technical Skills</div>
+      <h2 class="section-title">보유 기술</h2>
+      <p class="section-sub">연구 및 개발에 활용하는 프로그래밍 언어, 도구, 전문 분야입니다.</p>
+    </div>
+    <div class="skills-layout" id="skills-layout"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     연락처
+══════════════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div>
+        <div class="section-label">Contact</div>
+        <h2 class="contact-heading">
+          함께 연구하고<br><span>성장합시다.</span>
+        </h2>
+        <p class="contact-sub">
+          공동 연구, 프로젝트 협력, 또는 단순한 질문이라도 언제든지 연락주세요.
+        </p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" id="contact-email-link" href="mailto:">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          이메일
+        </a>
+        <a class="contact-link" id="contact-github-link" href="#" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="footer-year"></span> <span id="footer-name"></span>. All rights reserved.</span>
+      <span>Built with ❤️ for GitHub Pages</span>
+    </div>
+  </div>
+</section>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

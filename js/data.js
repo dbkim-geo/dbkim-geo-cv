@@ -10,14 +10,14 @@ const SITE_DATA = {
   profile: {
     name:        "김동범",
     nameEn:      "Dongbeom Kim",
-    title:       "연구원 / Ph.D. Candidate",
-    titleEn:     "Researcher · Ph.D. Candidate",
+    title:       "연구원 / 박사과정",
+    titleEn:     "Researcher · Ph.D. Student",
     affiliation: "한국환경연구원 / 고려대학교",
     department:  "스마트도시재생협동과정 스마트시티 전공",
     email:       "dongbum80@gmail.com",
     github:      "https://github.com/dbkim-geo",
     linkedin:    "",
-    googleScholar: "",
+    googleScholar: "https://scholar.google.co.kr/citations?user=vlqQ3lEAAAAJ&hl=ko",
     researchGate:  "",
     orcid:       "https://orcid.org/0000-0003-3267-4352",
     researcher_id: "12721081",
@@ -27,7 +27,7 @@ const SITE_DATA = {
       "원격탐사 (Remote Sensing)",
       "도시 환경 분석",
       "스마트시티",
-      "공간 딥러닝"
+      "GeoAI"
     ],
     profileImage: "assets/profile.jpg"
   },

@@ -58,12 +58,12 @@ function renderProfile() {
   // Logo
   document.getElementById('nav-logo').textContent = p.nameEn || p.name;
 
-  // Hero
+  // Hero photo (optional — element may not exist)
   const photoEl = document.getElementById('hero-photo');
-  if (p.profileImage) {
-    photoEl.innerHTML = `<img src="${esc(p.profileImage)}" alt="${esc(p.name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" onerror="this.parentNode.innerHTML='<span style=\\"font-size:4rem\\">👤</span>'">`;
-  } else {
-    photoEl.innerHTML = `<span style="font-size:4rem">👤</span>`;
+  if (photoEl) {
+    photoEl.innerHTML = p.profileImage
+      ? `<img src="${esc(p.profileImage)}" alt="${esc(p.name)}" style="width:100%;height:100%;border-radius:50%;object-fit:cover;" onerror="this.parentNode.innerHTML='<span style=\\"font-size:4rem\\">👤</span>'">`
+      : `<span style="font-size:4rem">👤</span>`;
   }
 
   document.getElementById('hero-name').innerHTML =

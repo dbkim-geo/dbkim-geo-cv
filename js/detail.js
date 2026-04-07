@@ -204,7 +204,7 @@ function renderPatent(item, catLabel) {
 
   document.getElementById('detail-sidebar-content').innerHTML =
     renderInfoCard([
-      { label: '발명자',   val: item.inventors },
+      { label: '발명자',   val: item.authors ?? item.inventors },
       { label: '출원인',   val: item.assignee },
       { label: '출원번호', val: item.number },
       { label: '출원일',   val: item.filing_date },

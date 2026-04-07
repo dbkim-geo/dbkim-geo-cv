@@ -101,12 +101,12 @@ const SITE_DATA = {
         number:   "",
         pages:    "",
         year:     2025,
-        doi:      "",
+        doi:      "10.1109/ACCESS.2025.3539685",
         quartile: "Q2",
         abstract: "",
         keywords: ["multi-agent reinforcement learning", "traffic signal control", "CO2 emission"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.1109/ACCESS.2025.3539685"
       },
       {
         id:       "ij_1",
@@ -117,12 +117,12 @@ const SITE_DATA = {
         number:   "No. 4",
         pages:    "p. 1741",
         year:     2025,
-        doi:      "",
+        doi:      "10.3390/app15041741",
         quartile: "Q2",
         abstract: "",
         keywords: ["aggressive driving", "elderly pedestrian", "XAI", "traffic accident"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/app15041741"
       },
       {
         id:       "ij_2",
@@ -133,12 +133,12 @@ const SITE_DATA = {
         number:   "No. 14",
         pages:    "p. 4739",
         year:     2024,
-        doi:      "",
+        doi:      "10.3390/s24144739",
         quartile: "Q2",
         abstract: "",
         keywords: ["two-wheeled vehicle", "safe driving", "evaluation system", "sensors"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/s24144739"
       },
       {
         id:       "ij_3",
@@ -149,12 +149,12 @@ const SITE_DATA = {
         number:   "No. 2",
         pages:    "p. 420",
         year:     2023,
-        doi:      "",
+        doi:      "10.3390/land12020420",
         quartile: "Q2",
         abstract: "",
         keywords: ["urban growth", "XAI", "explainable AI", "Seoul", "land use"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/land12020420"
       },
       {
         id:       "ij_4",
@@ -163,14 +163,14 @@ const SITE_DATA = {
         journal:  "Applied Sciences",
         volume:   "Vol. 13",
         number:   "No. 22",
-        pages:    "p. 12377",
+        pages:    "p. 12475",
         year:     2023,
-        doi:      "",
+        doi:      "10.3390/app132212475",
         quartile: "Q2",
         abstract: "",
         keywords: ["aggressive driving", "two-wheeled vehicle", "sensor", "detection"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/app132212475"
       },
       {
         id:       "ij_5",
@@ -181,12 +181,12 @@ const SITE_DATA = {
         number:   "No. 22",
         pages:    "p. 12377",
         year:     2023,
-        doi:      "",
+        doi:      "10.3390/app132212377",
         quartile: "Q2",
         abstract: "",
         keywords: ["dangerous driving index", "two-wheeled vehicle", "AHP"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/app132212377"
       },
       {
         id:       "ij_6",
@@ -197,12 +197,12 @@ const SITE_DATA = {
         number:   "No. 23",
         pages:    "p. 15926",
         year:     2022,
-        doi:      "",
+        doi:      "10.3390/ijerph192315926",
         quartile: "Q2",
         abstract: "",
         keywords: ["LULC", "LST", "land surface temperature", "XAI", "Seoul"],
         status:   "published",
-        url:      ""
+        url:      "https://doi.org/10.3390/ijerph192315926"
       }
     ],
 
@@ -366,16 +366,181 @@ const SITE_DATA = {
     ],
 
     // 특허
-    patents: [],
+    patents: [
+      {
+        id:                  "pat_0",
+        title:               "도시 탄소흡수원 관리를 위한 계절 변화 적응형 멀티모달 수목 수관면적 산정 방법 및 시스템",
+        authors:             "김근한, 김동범",
+        assignee:            "한국환경연구원",
+        number:              "10-2025-0142828",
+        filing_date:         "2025.09.30",
+        registration_date:   "",
+        status:              "출원",
+        year:                2025
+      },
+      {
+        id:                  "pat_1",
+        title:               "이륜차의 위험 운전 감지를 위한 시스템 및 이를 위한 방법",
+        authors:             "전철민, 김동범, 김혜민, 이수연",
+        assignee:            "서울시립대학교",
+        number:              "10-2850743",
+        filing_date:         "",
+        registration_date:   "",
+        status:              "등록",
+        year:                2024
+      },
+      {
+        id:                  "pat_2",
+        title:               "교통사고 위험도를 기반으로 경로를 계획하는 경로 생성 장치 및 방법",
+        authors:             "전철민, 김동범, 한유한, 박진혁",
+        assignee:            "",
+        number:              "10-2023-0121547",
+        filing_date:         "2023",
+        registration_date:   "",
+        status:              "출원",
+        year:                2023
+      },
+      {
+        id:                  "pat_3",
+        title:               "이륜차의 난폭운전에 대한 안전 교육을 지원하는 장치 및 방법",
+        authors:             "전철민, 김동범, 한유한, 김혜민, 이수연",
+        assignee:            "",
+        number:              "10-2023-0174310",
+        filing_date:         "2023",
+        registration_date:   "",
+        status:              "출원",
+        year:                2023
+      }
+    ],
 
     // 소프트웨어
-    software: []
+    software: [
+      {
+        id:                  "sw_0",
+        title:               "이륜차 교통사고 위험도 알림 프로그램",
+        authors:             "전철민, 김동범, 한유한, 박진혁",
+        organization:        "",
+        registration_number: "C-2023-037663",
+        year:                2023
+      }
+    ]
   },
 
   // ----------------------------------------------------------
   // 참여 프로젝트
   // ----------------------------------------------------------
-  projects: [],
+  projects: [
+    {
+      id:           "proj_0",
+      title:        "탄소공간지도기반 계획지원 기술개발",
+      type:         "R&D",
+      period:       "2025.04 – 2026.12",
+      role:         "공동기관 참여연구원",
+      organization: "국토교통부",
+      funding:      "국토교통과학기술진흥원",
+      description:  "정주지 부문 탄소흡수량 식별 알고리즘 개발, 탄소흡수량 지도 구축",
+      tags:         ["탄소흡수", "원격탐사", "GIS", "R&D"]
+    },
+    {
+      id:           "proj_1",
+      title:        "이륜차 착한운전 평가 기술개발",
+      type:         "R&D",
+      period:       "2023.01 – 2023.12",
+      role:         "주관기관 참여연구원",
+      organization: "행정안전부",
+      funding:      "한국지역정보개발원",
+      description:  "과제 관리, 난폭운전 탐지 알고리즘 개발, 플랫폼 API 개발",
+      tags:         ["이륜차", "난폭운전", "알고리즘", "R&D"]
+    },
+    {
+      id:           "proj_2",
+      title:        "온실가스 배출 저감을 위한 국토 공간 계획 및 관리 기술 개발",
+      type:         "R&D",
+      period:       "2022.01 – 2022.12",
+      role:         "공동기관 참여연구원",
+      organization: "국토교통부",
+      funding:      "국토교통과학기술진흥원",
+      description:  "시스템 개발, 연구기관 알고리즘 API 개발",
+      tags:         ["온실가스", "국토계획", "시스템개발", "R&D"]
+    },
+    {
+      id:           "proj_3",
+      title:        "동적 공간 점유 보행자 모델을 고려한 화재 대피 시뮬레이션 개발",
+      type:         "장학",
+      period:       "2023.03 – 2024.12",
+      role:         "장학생",
+      organization: "국토교통부",
+      funding:      "공간정보산업진흥원",
+      description:  "동적 공간 점유 보행자 모델을 고려한 화재 대피 시뮬레이션 개발",
+      tags:         ["화재대피", "시뮬레이션", "공간정보", "장학"]
+    },
+    {
+      id:           "proj_4",
+      title:        "GK2B GEMS를 활용한 환경 빅데이터 분석 예비 연구 - ⅲ",
+      type:         "용역",
+      period:       "2023.03 – 2023.12",
+      role:         "참여연구원",
+      organization: "한국환경연구원",
+      funding:      "",
+      description:  "시스템 개발 및 분석",
+      tags:         ["GEMS", "환경빅데이터", "분석", "용역"]
+    },
+    {
+      id:           "proj_5",
+      title:        "기후변화 영향 평가 및 기법 검토 연구",
+      type:         "용역",
+      period:       "2024.08 – 2024.12",
+      role:         "참여연구원",
+      organization: "한국환경연구원",
+      funding:      "",
+      description:  "연구분석",
+      tags:         ["기후변화", "영향평가", "용역"]
+    },
+    {
+      id:           "proj_6",
+      title:        "대구시 도시생태 현황도",
+      type:         "용역",
+      period:       "2024.08 – 2024.12",
+      role:         "참여연구원",
+      organization: "경북개발연구원",
+      funding:      "",
+      description:  "시스템 개발 및 분석, 공간 계획 적용",
+      tags:         ["도시생태", "GIS", "공간계획", "용역"]
+    },
+    {
+      id:           "proj_wip_0",
+      title:        "시계열을 고려한 항공영상 기반 고해상도 탄소흡수량 지도 구축",
+      type:         "진행중",
+      period:       "진행중",
+      role:         "연구자",
+      organization: "",
+      funding:      "",
+      description:  "시계열 항공영상 분석을 통한 고해상도 탄소흡수량 지도 구축 연구",
+      tags:         ["탄소흡수", "항공영상", "원격탐사", "진행중"]
+    },
+    {
+      id:           "proj_wip_1",
+      title:        "off-nadir를 고려한 항공영상 기반 고해상도 지상 바이오매스 흡수량 변화 탐지 연구",
+      type:         "진행중",
+      period:       "진행중",
+      role:         "연구자",
+      organization: "",
+      funding:      "",
+      description:  "off-nadir 항공영상을 활용한 지상 바이오매스 흡수량 변화 탐지",
+      tags:         ["바이오매스", "항공영상", "원격탐사", "진행중"]
+    },
+    {
+      id:           "proj_wip_2",
+      title:        "스마트시티 정책의 탄소 저감 효과를 탐색하는 연구",
+      type:         "진행중",
+      period:       "진행중",
+      role:         "연구자",
+      organization: "",
+      funding:      "",
+      description:  "스마트시티 정책 시행에 따른 탄소 저감 효과 분석",
+      tags:         ["스마트시티", "탄소저감", "정책분석", "진행중"]
+    }
+  ],
 
   // ----------------------------------------------------------
   // 보유 기술

@@ -258,24 +258,94 @@ function renderProject(item) {
   ];
   document.getElementById('detail-meta-row').innerHTML = renderBadgesMeta(badges);
 
-  document.getElementById('detail-main').innerHTML = `
-    <div class="detail-section">
-      <div class="detail-section-title">프로젝트 개요</div>
-      <p>${esc(item.description)}</p>
-    </div>
-    ${item.outcomes?.length ? `<div class="detail-section">
+  let html = '';
+
+  // 대표 이미지
+  if (item.overview_image) {
+    html += `<div class="detail-section">
+      <figure style="margin:0">
+        <img src="${esc(item.overview_image)}" alt="${esc(item.overview_caption ?? '')}"
+             style="width:100%;border-radius:var(--radius);border:1px solid var(--border)">
+        ${item.overview_caption ? `<figcaption style="text-align:center;font-size:.85rem;color:var(--txt-3);margin-top:.5rem">${esc(item.overview_caption)}</figcaption>` : ''}
+      </figure>
+    </div>`;
+  }
+
+  // 프로젝트 개요
+  html += `<div class="detail-section">
+    <div class="detail-section-title">프로젝트 개요</div>
+    <p>${esc(item.description)}</p>
+  </div>`;
+
+  // 성과목표
+  if (item.objectives?.length) {
+    html += `<div class="detail-section">
+      <div class="detail-section-title">성과목표</div>
+      <div style="display:flex;flex-direction:column;gap:.75rem">
+        ${item.objectives.map(o => `
+          <div style="padding:.75rem 1rem;background:var(--bg-2);border-radius:var(--radius);border-left:3px solid var(--accent)">
+            <div style="font-size:.78rem;font-weight:700;color:var(--accent);margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.04em">${esc(o.label)}</div>
+            <div style="font-weight:600;color:var(--txt-1);margin-bottom:.2rem">${esc(o.title)}</div>
+            <div style="font-size:.9rem;color:var(--txt-2)">${esc(o.detail)}</div>
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // 컨소시엄 역할
+  if (item.consortium_role) {
+    html += `<div class="detail-section">
+      <div class="detail-section-title">컨소시엄 담당 역할</div>
+      <p style="font-weight:600;color:var(--txt-1);margin-bottom:.6rem">${esc(item.consortium_role)}</p>
+      ${item.consortium_details?.length ? `<ul style="padding-left:1.25rem;color:var(--txt-2);font-size:.95rem;line-height:1.9;list-style:disc">
+        ${item.consortium_details.map(d => `<li>${esc(d)}</li>`).join('')}
+      </ul>` : ''}
+    </div>`;
+  }
+
+  // 수행 업무
+  if (item.contributions?.length) {
+    html += `<div class="detail-section">
+      <div class="detail-section-title">수행 업무</div>
+      <div style="display:flex;flex-direction:column;gap:2rem">
+        ${item.contributions.map(c => `
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;color:var(--txt-1);margin:0 0 .4rem">${esc(c.title)}</h3>
+            <p style="color:var(--txt-2);margin:0 0 .6rem;line-height:1.75">${esc(c.description)}</p>
+            ${c.methods?.length ? `<ul style="padding-left:1.25rem;color:var(--txt-2);font-size:.9rem;line-height:1.9;list-style:disc;margin:0 0 .75rem">
+              ${c.methods.map(m => `<li>${esc(m)}</li>`).join('')}
+            </ul>` : ''}
+            ${c.image ? `<figure style="margin:0">
+              <img src="${esc(c.image)}" alt="${esc(c.image_caption ?? '')}"
+                   style="width:100%;border-radius:var(--radius);border:1px solid var(--border)">
+              ${c.image_caption ? `<figcaption style="text-align:center;font-size:.85rem;color:var(--txt-3);margin-top:.5rem">${esc(c.image_caption)}</figcaption>` : ''}
+            </figure>` : ''}
+          </div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // 주요 성과
+  if (item.outcomes?.length) {
+    html += `<div class="detail-section">
       <div class="detail-section-title">주요 성과</div>
       <ul style="padding-left:1.25rem;color:var(--txt-2);font-size:.95rem;line-height:1.9;list-style:disc">
         ${item.outcomes.map(o => `<li>${esc(o)}</li>`).join('')}
       </ul>
-    </div>` : ''}
-    ${item.tech_stack?.length ? `<div class="detail-section">
+    </div>`;
+  }
+
+  // 활용 기술
+  if (item.tech_stack?.length) {
+    html += `<div class="detail-section">
       <div class="detail-section-title">활용 기술</div>
       <div class="detail-kw-list">
         ${item.tech_stack.map(t => `<span class="detail-kw">${esc(t)}</span>`).join('')}
       </div>
-    </div>` : ''}
-  `;
+    </div>`;
+  }
+
+  document.getElementById('detail-main').innerHTML = html;
 
   document.getElementById('detail-sidebar-content').innerHTML =
     renderInfoCard([

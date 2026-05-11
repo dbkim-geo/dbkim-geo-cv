@@ -210,15 +210,15 @@ const SITE_DATA = {
         authors: "Dongbeom Kim, Joonwoo Lee, Jeongho Yoon, Geunhan Kim",
         journal: "International Journal of Digital Earth",
         volume: "Vol. 19",
-        number: "No. 23",
-        pages: "p. 15926",
+        number: "No. 1",
+        pages: "p. 2654250",
         year: 2026,
-        doi: "10.3390/ijerph192315926",
+        doi: "10.1080/17538947.2026.2654250",
         quartile: "Q1",
         abstract: "",
-        keywords: ["LULC", "LST", "land surface temperature", "XAI", "Seoul"],
+        keywords: ["Tree probability maps", "tree canopy mapping", "carbon absorption mapping framework", "transformer-augmented U-Net models"],
         status: "published",
-        url: "https://doi.org/10.3390/ijerph192315926"
+        url: "https://doi.org/10.1080/17538947.2026.2654250"
       }
     ],
 
